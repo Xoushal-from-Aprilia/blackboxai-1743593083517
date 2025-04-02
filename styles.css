@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+#start-btn, #restart-btn {
+    box-shadow: 0 0 15px theme('colors.cyan.500');
+}
+
+#start-btn:hover, #restart-btn:hover {
+    box-shadow: 0 0 25px theme('colors.cyan.400');
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    background-color: #0f172a;
+}
+
+#score-display, #health-display {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+#score, #health, #final-score {
+    color: theme('colors.cyan.400');
+    font-weight: bold;
+}
+
+h1 {
+    text-shadow: 0 0 10px theme('colors.cyan.500');
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
